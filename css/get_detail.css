@@ -1,0 +1,14 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.pull-right{
+	float: right;
+}
+.table-striped th{
+	width: 12.5%;
+	text-align: center;
+}
+.table-striped td{
+	text-align: center;
+}
