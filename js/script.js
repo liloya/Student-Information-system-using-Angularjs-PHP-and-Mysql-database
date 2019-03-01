@@ -2,16 +2,10 @@ var myApp=angular.module("myApp",['angularUtils.directives.dirPagination']);
 
 myApp.controller("myController",function($scope,$http){
 	
-   // $scope.newUser={};
     $scope.clickedUser={};
-    //$scope.message="";
     
-
     ReadIt(); // load all information first
-
-    /*$scope.updatebtn = false;
-    $scope.addbtn = true;*/
-
+                                                                                                                                                                                                                                                
     function ReadIt() {
         $http.get("php/ReadIt.php")
         .then(function successCallback(response) {
@@ -30,12 +24,11 @@ myApp.controller("myController",function($scope,$http){
          $scope.names = response.data;
      });
 
-     //when Add new button
+     //when Add new button                                                                                                                 
      $scope.getinsert=function(){
      //get all info page
      window.location = "index.php";
      }
-
 
     $scope.selectUser=function(user){
     	console.log(user);
@@ -50,14 +43,7 @@ myApp.controller("myController",function($scope,$http){
             console.log(response);
         };
     }
-    //when click on edit button
-    /*$scope.EditIt = function(id, name, email, mblno,sub_name) {
-        $scope.id = id;
-        $scope.name = name;
-        $scope.email = email;
-        $scope.mblno = mblno;
-        $scope.sub_name=sub_name;
-    }*/
+   
     //when click save button after editting
     $scope.UpdateIt=function(id,name,email,mblno,sub_name){
     console.log($scope.clickedUser);  
@@ -71,7 +57,6 @@ myApp.controller("myController",function($scope,$http){
       }).then(function successCallback(response) {
        // Store response data
          ReadIt();
-         //sweetAlert("Update Complete","Update Complete Form","success");
             console.log(response);
      }),function errorCallback(response) {
             console.log(response);
