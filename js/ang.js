@@ -35,19 +35,5 @@ $scope.allinfo=function(){
 	window.location = "get_detail.php";
  }
 
- /*ReadIt(); // load all information first
-
-    /*$scope.updatebtn = false;
-    $scope.addbtn = true;*/
-
-   /* function ReadIt() {
-        $http.get("php/ReadIt.php").success(function(data) {
-            $scope.names = data;
-        }).error(function(data, status, headers, config) {
-            console.log(data);
-        })
-    }*/
-
-
 }]);
 
